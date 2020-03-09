@@ -55,10 +55,6 @@
     return target;
   }
 
-  var global$1 = (typeof global !== "undefined" ? global :
-              typeof self !== "undefined" ? self :
-              typeof window !== "undefined" ? window : {});
-
   function _typeof(obj) {
     if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
       _typeof = function (obj) {
@@ -6382,7 +6378,7 @@
     return CoreFactory;
   }(BaseObject);
 
-  var global$1$1 = (typeof global$1 !== "undefined" ? global$1 :
+  var global$1 = (typeof global !== "undefined" ? global :
               typeof self !== "undefined" ? self :
               typeof window !== "undefined" ? window : {});
 
@@ -6397,10 +6393,10 @@
   }
   var cachedSetTimeout = defaultSetTimout;
   var cachedClearTimeout = defaultClearTimeout;
-  if (typeof global$1$1.setTimeout === 'function') {
+  if (typeof global$1.setTimeout === 'function') {
       cachedSetTimeout = setTimeout;
   }
-  if (typeof global$1$1.clearTimeout === 'function') {
+  if (typeof global$1.clearTimeout === 'function') {
       cachedClearTimeout = clearTimeout;
   }
 
@@ -6549,7 +6545,7 @@
   }function umask() { return 0; }
 
   // from https://github.com/kumavis/browser-process-hrtime/blob/master/index.js
-  var performance$1 = global$1$1.performance || {};
+  var performance$1 = global$1.performance || {};
   var performanceNow =
     performance$1.now        ||
     performance$1.mozNow     ||
@@ -11720,7 +11716,7 @@
     return GoogleAnalytics;
   }(ContainerPlugin);
 
-  var global$1$2 = (typeof global$1 !== "undefined" ? global$1 :
+  var global$1$1 = (typeof global !== "undefined" ? global :
               typeof self !== "undefined" ? self :
               typeof window !== "undefined" ? window : {});
 
@@ -11735,10 +11731,10 @@
   }
   var cachedSetTimeout$1 = defaultSetTimout$1;
   var cachedClearTimeout$1 = defaultClearTimeout$1;
-  if (typeof global$1$2.setTimeout === 'function') {
+  if (typeof global$1$1.setTimeout === 'function') {
       cachedSetTimeout$1 = setTimeout;
   }
-  if (typeof global$1$2.clearTimeout === 'function') {
+  if (typeof global$1$1.clearTimeout === 'function') {
       cachedClearTimeout$1 = clearTimeout;
   }
 
@@ -11859,7 +11855,7 @@
   };
 
   // from https://github.com/kumavis/browser-process-hrtime/blob/master/index.js
-  var performance$2 = global$1$2.performance || {};
+  var performance$2 = global$1$1.performance || {};
   var performanceNow$1 =
     performance$2.now        ||
     performance$2.mozNow     ||
